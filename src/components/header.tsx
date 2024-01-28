@@ -6,7 +6,7 @@ import { Button } from "~/components/ui/button";
 import { Instagram, Facebook, Bone } from "lucide-react";
 import { TikTok } from "./tiktok-icon";
 import { usePathname } from "next/navigation";
-
+import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 export default function Header() {
   const pathname = usePathname();
 
@@ -43,15 +43,25 @@ export default function Header() {
 
         <nav className="flex items-center">
           <Button variant="ghost" size="icon">
-            <Instagram />
+            <Link href="https://www.instagram.com/" target="_blank">
+              <Instagram className="h-[1.2rem] w-[1.2rem]" />
+            </Link>
           </Button>
           <Button variant="ghost" size="icon">
-            <Facebook />
+            <Link href="https://www.facebook.com/" target="_blank">
+              <Facebook className="h-[1.2rem] w-[1.2rem]" />
+            </Link>
           </Button>
           <Button variant="ghost" size="icon">
-            <TikTok />
+            <Link href="https://www.tiktok.com/" target="_blank">
+              <TikTok />
+            </Link>
           </Button>
           <ModeToggle />
+          <Avatar className="h-[2rem] w-[2rem]">
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
         </nav>
       </div>
     </header>

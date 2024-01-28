@@ -4,8 +4,8 @@ export function TikTok(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="1.2rem"
+      height="1.2rem"
       viewBox="0 0 26 24"
       fill="none"
       stroke="currentColor"
