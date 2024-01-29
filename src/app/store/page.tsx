@@ -13,8 +13,6 @@ export default async function Store() {
 }
 
 async function Comp() {
-  const session = await getServerAuthSession();
-  if (!session?.user) return null;
   const categories = await api.article.getCategories.query();
   return (
     <div>
