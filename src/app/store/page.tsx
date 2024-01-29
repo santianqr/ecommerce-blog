@@ -1,6 +1,13 @@
+import { api } from "~/trpc/server";
 
-export default function Store() {
+export default async function Store() {
+  const categories = await api.article.getCategories.query();
   return (
-    <main>STORE</main>
-  )
+    <main>
+      STORE
+      {categories.map((category, index) => (
+        <p key={index}>{category.category_one}</p>
+      ))}
+    </main>
+  );
 }
