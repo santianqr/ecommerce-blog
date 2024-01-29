@@ -26,6 +26,15 @@ model Post {
     @@index([name])
 }
 
+model Article {
+    id           String @id @default(cuid())
+    name         String
+    category_one String
+    category_two String
+    price        Int
+    stock        Int
+}
+
 // Necessary for Next auth
 model Account {
     id                String  @id @default(cuid())

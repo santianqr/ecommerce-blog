@@ -5,7 +5,6 @@ import {
   type NextAuthOptions,
 } from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
-
 import { env } from "~/env";
 import { db } from "~/server/db";
 
@@ -51,6 +50,7 @@ export const authOptions: NextAuthOptions = {
       clientId: env.GITHUB_CLIENT_ID,
       clientSecret: env.GITHUB_CLIENT_SECRET,
     }),
+
     /**
      * ...add more providers here.
      *
