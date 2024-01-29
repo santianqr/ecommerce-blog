@@ -39,7 +39,7 @@ export default async function Header() {
           <ModeToggle />
           {session ? (
             <Avatar className="h-[2rem] w-[2rem]">
-              <AvatarImage src={session?.user?.image || ""} alt="@shadcn" />
+              <AvatarImage src="https://github.com/santianqr.png" alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           ) : (

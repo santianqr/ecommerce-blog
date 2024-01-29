@@ -8,9 +8,11 @@ export default async function Home() {
     <main className="">
       INICIO
       {JSON.stringify(categories)}
-      {categories.map((category, index) => (
-        <p key={index}>{category.category_one}</p>
-      ))}
+      <aside>
+        {categories.map((category, index) => (
+          <p key={index}>{category.category_one}</p>
+        ))}
+      </aside>
     </main>
   );
 }
