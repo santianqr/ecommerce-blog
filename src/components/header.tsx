@@ -45,17 +45,17 @@ export default async function Header() {
           </Button>
 
           <nav className="flex items-center">
-            <Button variant="ghost" size="icon" className="hidden md:block">
+            <Button variant="ghost" size="icon" className="hidden md:flex">
               <Link href="https://www.instagram.com/" target="_blank">
                 <Instagram className="h-[1.2rem] w-[1.2rem]" />
               </Link>
             </Button>
-            <Button variant="ghost" size="icon" className="hidden md:block">
+            <Button variant="ghost" size="icon" className="hidden md:flex">
               <Link href="https://www.facebook.com/" target="_blank">
                 <Facebook className="h-[1.2rem] w-[1.2rem]" />
               </Link>
             </Button>
-            <Button variant="ghost" size="icon" className="hidden md:block">
+            <Button variant="ghost" size="icon" className="hidden md:flex">
               <Link href="https://www.tiktok.com/" target="_blank">
                 <TikTok />
               </Link>
