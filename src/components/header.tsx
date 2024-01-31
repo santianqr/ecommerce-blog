@@ -18,18 +18,17 @@ export default async function Header() {
   const session = await getServerAuthSession();
   return (
     <header className="sticky z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 px-2 sm:px-0 sm:max-w-screen-2xl items-center justify-between ">
+      <div className="container flex h-14 items-center justify-between px-2 sm:max-w-screen-2xl sm:px-0 ">
         <div className="flex w-full items-center justify-between sm:w-8">
           <Menu className="block sm:hidden" />
           <Button
             variant="outline"
-            className="m-0 sm:mr-4 flex text-foreground/60 sm:hidden"
+            className="m-0 flex text-foreground/60 sm:mr-4 sm:hidden"
             size="sm"
           >
-            
             <Search />
           </Button>
-          <Link href="/" className="m-0 sm:mr-6 flex items-center space-x-2">
+          <Link href="/" className="m-0 flex items-center space-x-2 sm:mr-6">
             <Bone />
             <span className="font-bold">Huellitas</span>
           </Link>
