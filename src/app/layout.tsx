@@ -14,7 +14,7 @@ const fontSans = FontSans({
 export const metadata = {
   title: "Huellitas Dogshop - Tienda de productos para perros en Colombia",
   description:
-    "Encuentra productos premium para perros en nuestra tienda en línea en Colombia. Ofrecemos una amplia gama de artículos para perros de todas las razas y tamaños. ¡Descubre hoy mismo el producto perfecto para tu mascota!",
+    "Encuentra productos para perros en nuestra tienda en línea en Colombia. Ofrecemos una amplia gama de artículos para perros de todas las razas y tamaños. ¡Descubre hoy mismo el producto perfecto para tu mascota!",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
