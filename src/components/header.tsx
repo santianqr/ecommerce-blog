@@ -18,7 +18,7 @@ export default async function Header() {
   const session = await getServerAuthSession();
   return (
     <header className="sticky z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center justify-between px-2 sm:max-w-screen-2xl sm:px-0 ">
+      <div className="container flex h-14 items-center justify-between px-2 sm:max-w-screen-2xl ">
         <div className="flex w-full items-center justify-between sm:w-8">
           <Menu className="block sm:hidden" />
           <Button
