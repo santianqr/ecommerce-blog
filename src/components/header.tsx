@@ -18,10 +18,18 @@ export default async function Header() {
   const session = await getServerAuthSession();
   return (
     <header className="sticky z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center justify-between ">
-        <div className="flex items-center w-full justify-between sm:w-8">
+      <div className="container flex h-14 px-2 sm:px-0 sm:max-w-screen-2xl items-center justify-between ">
+        <div className="flex w-full items-center justify-between sm:w-8">
           <Menu className="block sm:hidden" />
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+          <Button
+            variant="outline"
+            className="m-0 sm:mr-4 flex text-foreground/60 sm:hidden"
+            size="sm"
+          >
+            
+            <Search />
+          </Button>
+          <Link href="/" className="m-0 sm:mr-6 flex items-center space-x-2">
             <Bone />
             <span className="font-bold">Huellitas</span>
           </Link>
@@ -30,7 +38,7 @@ export default async function Header() {
         <div className="flex items-center">
           <Button
             variant="outline"
-            className="mr-4 text-foreground/60 hidden sm:flex"
+            className="mr-4 hidden text-foreground/60 sm:flex"
             size="sm"
           >
             <p className="hidden sm:block">Buscar articulos</p>
@@ -55,7 +63,7 @@ export default async function Header() {
             </Button>
             <ModeToggle />
             {session ? (
-              <Avatar className="ml-2 h-[2rem] w-[2rem] sm:block hidden">
+              <Avatar className="ml-2 hidden h-[2rem] w-[2rem] sm:block">
                 <AvatarImage
                   src="https://github.com/santianqr.png"
                   alt="@shadcn"
@@ -63,7 +71,7 @@ export default async function Header() {
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
             ) : (
-              <CircleUserRound className="ml-2 sm:block hidden" />
+              <CircleUserRound className="ml-2 hidden sm:block" />
             )}
           </nav>
         </div>
