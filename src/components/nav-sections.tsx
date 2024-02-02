@@ -7,7 +7,7 @@ export default function NavSections() {
   const pathname = usePathname();
 
   return (
-    <nav className="sm:flex items-center gap-6 text-sm hidden">
+    <nav className="ml-6 hidden items-center gap-6 text-sm sm:flex">
       <Link
         href="/"
         className={`transition-colors hover:text-foreground/80  ${pathname === "/" ? "text-foreground" : "text-foreground/60"}`}

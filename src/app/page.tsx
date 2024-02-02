@@ -3,16 +3,11 @@ import SectionDivider from "~/components/section-divider";
 
 export default async function Home() {
   return (
-    <main className="container flex flex-col px-2 sm:max-w-screen-2xl">
-      <SectionDivider />
+    <main className="container space-y-20">
       <HeroSection />
-      <SectionDivider />
       <section>featured products</section>
-      <SectionDivider />
       <section>recomended products</section>
-      <SectionDivider />
       <section>social proof</section>
-      <SectionDivider />
       <section>faq</section>
     </main>
   );

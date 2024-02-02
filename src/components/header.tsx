@@ -5,20 +5,20 @@ import { Button } from "~/components/ui/button";
 import {
   Instagram,
   Facebook,
-  Bone,
   CircleUserRound,
   Search,
   Menu,
 } from "lucide-react";
-import { TikTok } from "./tiktok-icon";
+import { TiktokIcon } from "./tiktok-icon";
 import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 import { getServerAuthSession } from "~/server/auth";
+import Logo from "./logo";
 
 export default async function Header() {
   const session = await getServerAuthSession();
   return (
     <header className="sticky z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center justify-between px-2 sm:max-w-screen-2xl ">
+      <div className="container mx-auto flex h-14 items-center justify-between">
         <div className="flex w-full items-center justify-between sm:w-8">
           <Menu className="block sm:hidden" />
           <Button
@@ -28,10 +28,7 @@ export default async function Header() {
           >
             <Search />
           </Button>
-          <Link href="/" className="m-0 flex items-center space-x-2 sm:mr-6">
-            <Bone />
-            <span className="font-bold">Huellitas</span>
-          </Link>
+          <Logo />
           <NavSections />
         </div>
         <div className="flex items-center">
@@ -57,7 +54,7 @@ export default async function Header() {
             </Button>
             <Button variant="ghost" size="icon" className="hidden md:flex">
               <Link href="https://www.tiktok.com/" target="_blank">
-                <TikTok />
+                <TiktokIcon />
               </Link>
             </Button>
             <ModeToggle />

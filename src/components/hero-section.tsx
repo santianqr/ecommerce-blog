@@ -3,7 +3,7 @@ import { Button } from "~/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="flex space-x-14 px-14">
+    <section className="mt-20 flex space-x-14 px-14">
       <div className="my-auto space-y-2">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
           Productos para Perros en Colombia - Artículos para Todas las Razas y
@@ -25,7 +25,7 @@ export default function Hero() {
           src="/hero-image.jpg"
           alt=""
           fill
-          className="rounded-md shadow-md shadow-card-foreground/40"
+          className="rounded-md shadow-md shadow-card-foreground/20"
           sizes="(max-width: 700px) 100vw, 33vw"
           priority
         />

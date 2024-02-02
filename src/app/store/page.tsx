@@ -1,9 +1,6 @@
 import { api } from "~/trpc/server";
-import { unstable_noStore as noStore } from "next/cache";
-import { getServerAuthSession } from "~/server/auth";
 
 export default async function Store() {
-  noStore();
   return (
     <main>
       STORE

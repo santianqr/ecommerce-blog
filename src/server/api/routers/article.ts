@@ -14,4 +14,12 @@ export const articleRouter = createTRPCRouter({
       distinct: ["category_one"],
     });
   }),
+  getSubCategories: publicProcedure.query(() => {
+    return db.article.findMany({
+      select: {
+        category_two: true,
+      },
+      distinct: ["category_two"],
+    });
+  }),
 });
