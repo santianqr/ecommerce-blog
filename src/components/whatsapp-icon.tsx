@@ -1,16 +1,20 @@
 import React from "react";
 import type { SVGProps } from "react";
 
-export function WhatsappIcon(props: SVGProps<SVGSVGElement>) {
+export function WhatsappIcon({
+  width = "1.25rem",
+  height = "1.25rem",
+  ...props
+}: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1.2em"
-      height="1.2em"
-      viewBox="0 0 256 256"
+      width={width}
+      height={height}
+      viewBox="0 0 254 254"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="10"
       strokeLinecap="round"
       strokeLinejoin="round"
       {...props}

@@ -1,11 +1,15 @@
 import type { SVGProps } from "react";
 
-export function TiktokIcon(props: SVGProps<SVGSVGElement>) {
+export function TiktokIcon({
+  width = "1.2rem",
+  height = "1.2rem",
+  ...props
+}: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1.2rem"
-      height="1.2rem"
+      width={width}
+      height={height}
       viewBox="0 0 26 24"
       fill="none"
       stroke="currentColor"
