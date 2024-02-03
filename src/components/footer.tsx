@@ -9,7 +9,7 @@ export default async function Footer() {
   const categories_one = await api.article.getCategories.query();
   const categories_two = await api.article.getSubCategories.query();
   return (
-    <footer className="container my-12 grid grid-cols-4">
+    <footer className="container my-12 grid grid-cols-4 justify-items-center">
       <Logo iconSize={48} fontSize="text-xl" />
       <div>
         Categories:
