@@ -13,7 +13,6 @@ export default async function Footer() {
       <div className="col-span-2 my-auto sm:col-span-1">
         <Logo iconSize={48} fontSize="text-xl" />
       </div>
-
       <div>
         <p className="font-semibold">Categorias 1</p>
         {categories_one.map((category, index) => (
