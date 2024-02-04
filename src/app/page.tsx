@@ -1,5 +1,5 @@
+import FaqSection from "~/components/faq-section";
 import HeroSection from "~/components/hero-section";
-import SectionDivider from "~/components/section-divider";
 
 export default async function Home() {
   return (
@@ -8,7 +8,8 @@ export default async function Home() {
       <section>featured products</section>
       <section>recomended products</section>
       <section>social proof</section>
-      <section>faq</section>
+      <FaqSection />
+      
     </main>
   );
 }

@@ -9,8 +9,8 @@ export default async function Footer() {
   const categories_one = await api.article.getCategories.query();
   const categories_two = await api.article.getSubCategories.query();
   return (
-    <footer className="container my-12 grid grid-cols-2 justify-items-center gap-y-2 text-sm sm:grid-cols-4 sm:gap-y-1">
-      <div className="col-span-2 sm:col-span-1 my-auto">
+    <footer className="container my-14 grid grid-cols-2 justify-items-center gap-y-2 text-sm sm:grid-cols-4 sm:gap-y-1">
+      <div className="col-span-2 my-auto sm:col-span-1">
         <Logo iconSize={48} fontSize="text-xl" />
       </div>
 
