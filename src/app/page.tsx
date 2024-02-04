@@ -3,15 +3,19 @@ import FPSection from "~/components/featured-products-section";
 import HeroSection from "~/components/hero-section";
 import SocialSection from "~/components/social-section";
 import { unstable_noStore as noStore } from "next/cache";
+import Header from "~/components/header";
+import Footer from "~/components/footer";
 
 export default function Home() {
   noStore();
   return (
     <main className="container space-y-20">
+      <Header />
       <HeroSection />
       <FPSection />
       <SocialSection />
       <FaqSection />
+      <Footer />
     </main>
   );
 }
