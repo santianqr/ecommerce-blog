@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function MovileNavbar() {
   return (
-    <nav className="container fixed inset-x-0 bottom-0 flex w-screen justify-center gap-x-4 border-b border-border/40 bg-background py-1 sm:hidden sm:gap-x-8">
+    <nav className="container fixed inset-x-0 bottom-0 flex w-screen justify-between border-b border-border/40 bg-background py-1 sm:hidden">
       <Link
         href="/"
         className="hover:rounded-md hover:bg-foreground/5"
