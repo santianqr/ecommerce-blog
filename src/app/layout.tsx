@@ -7,6 +7,8 @@ import { ThemeProvider } from "~/components/theme-provider";
 import MovileNavbar from "~/components/movile-navbar";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
+import { api } from "~/trpc/server";
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -19,11 +21,14 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const categories_one = await api.article.getCategories.query();
+  const categories_two = await api.article.getSubCategories.query();
+
   return (
     <html lang="es" suppressHydrationWarning>
       <body
@@ -39,9 +44,12 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Header />
+            {/*<Header />*/}
             {children}
-            < Footer />
+            <Footer
+              categories_one={categories_one}
+              categories_two={categories_two}
+            />
             <MovileNavbar />
           </ThemeProvider>
         </TRPCReactProvider>
