@@ -3,24 +3,11 @@ import { WhatsappIcon } from "./whatsapp-icon";
 import { TiktokIcon } from "./tiktok-icon";
 import { Instagram, Facebook } from "lucide-react";
 import Link from "next/link";
+import { api } from "~/trpc/server";
 
-type CategoryOne = {
-  category_one: string;
-};
-
-type CategoryTwo = {
-  category_two: string;
-};
-
-type FooterProps = {
-  categories_one: CategoryOne[];
-  categories_two: CategoryTwo[];
-};
-
-export default function Footer({
-  categories_one,
-  categories_two,
-}: FooterProps) {
+export default async function Footer() {
+  const categories_one = await api.article.getCategories.query();
+  const categories_two = await api.article.getSubCategories.query();
   return (
     <footer className="container my-10 grid grid-cols-2 justify-items-center gap-y-2 text-sm sm:grid-cols-4 sm:gap-y-1">
       <div className="col-span-2 my-auto sm:col-span-1">
