@@ -5,7 +5,6 @@ import { cn } from "~/lib/utils";
 import { TRPCReactProvider } from "~/trpc/react";
 import { ThemeProvider } from "~/components/theme-provider";
 import MovileNavbar from "~/components/movile-navbar";
-import Header from "~/components/header";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -39,9 +38,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {/*<Header />*/}
             {children}
-
             <MovileNavbar />
           </ThemeProvider>
         </TRPCReactProvider>
