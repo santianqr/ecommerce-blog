@@ -1,6 +1,8 @@
 import { api } from "~/trpc/server";
+import { unstable_noStore as noStore } from "next/cache";
 
 export default async function Store() {
+  noStore();
   return (
     <main>
       STORE
