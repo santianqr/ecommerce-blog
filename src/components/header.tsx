@@ -8,7 +8,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 import { getServerAuthSession } from "~/server/auth";
 import Logo from "./logo";
 //import { unstable_noStore as noStore } from "next/cache";
-export const dynamic = "force-dynamic"
 
 export default async function Header() {
   //noStore();

@@ -5,7 +5,7 @@ import { Instagram, Facebook } from "lucide-react";
 import Link from "next/link";
 import { api } from "~/trpc/server";
 //import { unstable_noStore as noStore } from "next/cache";
-export const dynamic = "force-dynamic"
+
 
 export default async function Footer() {
   //noStore();
