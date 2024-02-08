@@ -43,15 +43,19 @@ export default async function Footer() {
       <div className="col-span-2 mx-auto mt-2 flex space-x-4 sm:col-span-4">
         <Link href="https://wa.me/+573188621924" target="_blank">
           <WhatsappIcon width="2rem" height="2rem" />
+          <span className="sr-only">Whatsapp</span>
         </Link>
         <Link href="https://www.tiktok.com/" target="_blank">
           <TiktokIcon width="2rem" height="2rem" />
+          <span className="sr-only">TikTok</span>
         </Link>
         <Link href="https://www.instagram.com/" target="_blank">
           <Instagram className="h-[2rem] w-[2rem]" />
+          <span className="sr-only">Instagram</span>
         </Link>
         <Link href="https://www.facebook.com/" target="_blank">
           <Facebook className="h-[2rem] w-[2rem]" />
+          <span className="sr-only">Facebook</span>
         </Link>
       </div>
 
