@@ -39,7 +39,7 @@ export default async function Header() {
             >
               <Link href="https://www.instagram.com/" target="_blank">
                 <Instagram className="h-[1.2rem] w-[1.2rem]" />
-                <p className="hidden">Instagram</p>
+                <span className="sr-only">Instagram</span>
               </Link>
             </Button>
             <Button
@@ -50,13 +50,13 @@ export default async function Header() {
             >
               <Link href="https://www.facebook.com/" target="_blank">
                 <Facebook className="h-[1.2rem] w-[1.2rem]" />
-                <p className="hidden">Facebook</p>
+                <span className="sr-only">Facebook</span>
               </Link>
             </Button>
             <Button variant="ghost" size="icon" className="hidden md:flex">
               <Link href="https://www.tiktok.com/" target="_blank" id="tiktok">
                 <TiktokIcon />
-                <p className="hidden">Tik Tok</p>
+                <span className="sr-only">Tik Tok</span>
               </Link>
             </Button>
             <ModeToggle />
