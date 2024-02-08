@@ -4,10 +4,11 @@ import { TiktokIcon } from "./tiktok-icon";
 import { Instagram, Facebook } from "lucide-react";
 import Link from "next/link";
 import { api } from "~/trpc/server";
-import { unstable_noStore as noStore } from "next/cache";
+//import { unstable_noStore as noStore } from "next/cache";
+export const dynamic = "force-dynamic"
 
 export default async function Footer() {
-  noStore();
+  //noStore();
   const categories_one = await api.article.getCategories.query();
   const categories_two = await api.article.getSubCategories.query();
   return (

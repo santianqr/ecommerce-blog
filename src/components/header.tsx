@@ -7,10 +7,11 @@ import { TiktokIcon } from "./tiktok-icon";
 import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 import { getServerAuthSession } from "~/server/auth";
 import Logo from "./logo";
-import { unstable_noStore as noStore } from "next/cache";
+//import { unstable_noStore as noStore } from "next/cache";
+export const dynamic = "force-dynamic"
 
 export default async function Header() {
-  noStore();
+  //noStore();
   const session = await getServerAuthSession();
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
