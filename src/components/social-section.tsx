@@ -56,7 +56,7 @@ export default function SocialSection() {
         opts={{
           align: "start",
         }}
-        className="mx-auto w-full max-w-xs sm:max-w-lg md:max-w-2xl"
+        className="mx-auto w-full max-w-xs md:max-w-lg lg:max-w-3xl"
       >
         <CarouselContent>
           {people.map((person, index) => (
@@ -76,7 +76,7 @@ export default function SocialSection() {
                           className="rounded-full"
                         />
                       </div>
-                      <p className="leading-7 [&:not(:first-child)]:mt-6">
+                      <p className="leading-7 [&:not(:first-child)]:mt-2">
                         {person.name}
                       </p>
                     </div>
